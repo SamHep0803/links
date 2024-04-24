@@ -1,6 +1,6 @@
 import { CircleUser, LinkIcon, Menu } from "lucide-react";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,9 +8,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { ModeToggle } from "./theme-switcher";
+} from "@/components/ui/dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/theme-switcher";
 
 function Navbar() {
   return (

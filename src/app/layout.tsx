@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
-import Navbar from "@/components/navbar";
+import Navbar from "./_components/navbar";
 import { ThemeProvider } from "./_providers/theme-provider";
 
 const inter = Inter({
