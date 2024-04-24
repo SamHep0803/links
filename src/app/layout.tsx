@@ -21,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable} overscroll-none`}>
+      <body
+        className={`font-sans ${inter.variable} overscroll-none bg-background antialiased`}
+      >
         <div className="flex h-screen min-h-screen w-full flex-col ">
           <Navbar />
           {children}

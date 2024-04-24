@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 function Navbar() {
   return (
-    <header className="bg-background sticky top-0 flex h-16 items-center justify-between gap-4 border-b px-4 md:px-6">
+    <header className="sticky top-0 flex h-16 items-center justify-between gap-4 border-b px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="#"
@@ -24,13 +24,13 @@ function Navbar() {
         </Link>
         <Link
           href="#"
-          className="text-foreground hover:text-foreground transition-colors"
+          className="text-foreground transition-colors hover:text-foreground"
         >
           Upload
         </Link>
         <Link
           href="#"
-          className="text-muted-foreground hover:text-foreground transition-colors"
+          className="text-muted-foreground transition-colors hover:text-foreground"
         >
           Links
         </Link>
@@ -53,13 +53,13 @@ function Navbar() {
             </Link>
             <Link
               href="#"
-              className="text-foreground hover:text-foreground transition-colors"
+              className="text-foreground transition-colors hover:text-foreground"
             >
               Upload
             </Link>
             <Link
               href="#"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground transition-colors hover:text-foreground"
             >
               Links
             </Link>
