@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { ModeToggle } from "./theme-switcher";
 
 function Navbar() {
   return (
@@ -67,6 +68,7 @@ function Navbar() {
         </SheetContent>
       </Sheet>
       <div className="flex items-center gap-4">
+        <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">

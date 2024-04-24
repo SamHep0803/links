@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
+import { ThemeProvider } from "./_providers/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,10 +25,17 @@ export default function RootLayout({
       <body
         className={`font-sans ${inter.variable} overscroll-none bg-background antialiased`}
       >
-        <div className="flex h-screen min-h-screen w-full flex-col ">
-          <Navbar />
-          {children}
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex h-screen min-h-screen w-full flex-col ">
+            <Navbar />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
