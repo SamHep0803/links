@@ -3,7 +3,8 @@
 ## TODO
 
 - [x] Scaffold project
-- [ ] Theme switching
+- [x] Theme switching
+- [ ] Auth
 - [ ] Start UI design using mock data
 - [ ] Update database schema
 - [ ] Update UI to use database data
