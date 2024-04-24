@@ -1,27 +1,20 @@
-import { CircleUser, LinkIcon, Menu } from "lucide-react";
+import { LinkIcon, Menu } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/theme-switcher";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 function Navbar() {
   return (
-    <header className="sticky top-0 flex h-16 items-center justify-between gap-4 border-b px-4 md:px-6">
+    <header className="sticky top-0 flex h-20 items-center justify-between gap-4 border-b px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="#"
-          className="flex items-center gap-2 text-lg font-semibold md:text-base"
+          className="flex items-center gap-2 font-semibold md:text-base"
         >
           <LinkIcon className="h-6 w-6" />
-          <div>Sam&apos;s Links</div>
+          <span className="text-xl hover:underline">Sam&apos;s Links</span>
         </Link>
         <Link
           href="#"
@@ -69,22 +62,14 @@ function Navbar() {
       </Sheet>
       <div className="flex items-center gap-4">
         <ModeToggle />
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="secondary" size="icon" className="rounded-full">
-              <CircleUser className="h-5 w-5" />
-              <span className="sr-only">Toggle user menu</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>Support</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton mode="modal">
+            <Button variant={"secondary"}>Sign in</Button>
+          </SignInButton>
+        </SignedOut>
       </div>
     </header>
   );
