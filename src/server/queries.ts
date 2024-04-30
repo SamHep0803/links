@@ -8,3 +8,7 @@ export async function createLink(url: string, slug: string | null) {
 
   return slug;
 }
+
+export async function deleteLink(slug: string) {
+  return slug;
+}
