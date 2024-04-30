@@ -83,7 +83,13 @@ function Navbar() {
       <div className="flex items-center gap-4">
         <ModeToggle />
         <SignedIn>
-          <UserButton />
+          <UserButton
+            appearance={{
+              elements: {
+                avatarBox: "h-10 w-10",
+              },
+            }}
+          />
         </SignedIn>
         <SignedOut>
           <SignInButton mode="modal">
