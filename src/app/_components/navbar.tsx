@@ -17,13 +17,13 @@ function Navbar() {
           <span className="text-xl hover:underline">Sam&apos;s Links</span>
         </Link>
         <Link
-          href="#"
+          href="/"
           className="text-foreground transition-colors hover:text-foreground"
         >
           Upload
         </Link>
         <Link
-          href="#"
+          href="/links"
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
           Links
@@ -39,20 +39,20 @@ function Navbar() {
         <SheetContent side="left">
           <nav className="grid gap-6 text-lg font-medium">
             <Link
-              href="#"
+              href="/"
               className="flex items-center gap-2 text-lg font-semibold md:text-base"
             >
               <LinkIcon className="h-6 w-6" />
               <div>Sam&apos;s Links</div>
             </Link>
             <Link
-              href="#"
+              href="/"
               className="text-foreground transition-colors hover:text-foreground"
             >
               Upload
             </Link>
             <Link
-              href="#"
+              href="/links"
               className="text-muted-foreground transition-colors hover:text-foreground"
             >
               Links
