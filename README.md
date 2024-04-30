@@ -5,7 +5,7 @@
 - [x] Scaffold project
 - [x] Theme switching
 - [x] Auth
-- [ ] Start UI design using mock data
+- [x] Start UI design using mock data
 - [ ] Update database schema
-- [ ] Update UI to use database data
+- [ ] link UI to database
 - [ ] Get project deployed
