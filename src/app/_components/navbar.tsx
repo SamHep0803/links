@@ -1,11 +1,17 @@
+"use client";
+
 import { LinkIcon, Menu } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/theme-switcher";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useSelectedLayoutSegment } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 function Navbar() {
+  const segment = useSelectedLayoutSegment();
+
   return (
     <header className="sticky top-0 flex h-20 items-center justify-between gap-4 border-b px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
@@ -18,13 +24,19 @@ function Navbar() {
         </Link>
         <Link
           href="/"
-          className="text-foreground transition-colors hover:text-foreground"
+          className={cn(
+            "transition-colors hover:text-foreground",
+            segment === null ? "text-foreground" : "text-muted-foreground",
+          )}
         >
           Upload
         </Link>
         <Link
           href="/links"
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className={cn(
+            "transition-colors hover:text-foreground",
+            segment === "links" ? "text-foreground" : "text-muted-foreground",
+          )}
         >
           Links
         </Link>
@@ -47,13 +59,21 @@ function Navbar() {
             </Link>
             <Link
               href="/"
-              className="text-foreground transition-colors hover:text-foreground"
+              className={cn(
+                "transition-colors hover:text-foreground",
+                segment === null ? "text-foreground" : "text-muted-foreground",
+              )}
             >
               Upload
             </Link>
             <Link
               href="/links"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className={cn(
+                "transition-colors hover:text-foreground",
+                segment === "links"
+                  ? "text-foreground"
+                  : "text-muted-foreground",
+              )}
             >
               Links
             </Link>
