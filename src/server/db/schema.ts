@@ -13,14 +13,14 @@ export const links = createTable(
   "link",
   {
     id: serial("id").primaryKey(),
-    slug: varchar("slug", { length: 256 }),
-    url: varchar("url", { length: 1024 }),
+    slug: varchar("slug", { length: 256 }).notNull(),
+    url: varchar("url", { length: 1024 }).notNull(),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updatedAt"),
   },
   (link) => ({
-    slugIndex: index("link_idx").on(link.slug),
+    slugIndex: index("slug_idx").on(link.slug),
   }),
 );

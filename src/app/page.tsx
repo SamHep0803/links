@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { createLink } from "@/server/queries";
 import { Plus } from "lucide-react";
+import { SubmitButton } from "./_components/submit-button";
 
 export default function HomePage() {
   return (
@@ -41,10 +42,7 @@ export default function HomePage() {
                   <Input id="slug" name="slug" placeholder="hgyenb" />
                 </div>
               </div>
-              <Button className="gap-x-2 self-end" type="submit">
-                <Plus className="h-4 w-4" />
-                Create
-              </Button>
+              <SubmitButton />
             </div>
           </form>
         </CardContent>
