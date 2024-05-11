@@ -12,11 +12,11 @@ export async function getLinks() {
 
   if (!user.userId) throw new Error("Unauthorized");
 
-  const images = db.query.links.findMany({
+  const links = await db.query.links.findMany({
     orderBy: (model, { desc }) => desc(model.createdAt),
   });
 
-  return images;
+  return links;
 }
 
 export async function getLink(slug: string) {
