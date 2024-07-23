@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Trash2 } from "lucide-react";
 import { CopyButton } from "./_components/copy-button";
 import { deleteLink, getLinks } from "@/server/queries";
 import { DeleteButton } from "./_components/delete-button";
